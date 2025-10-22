@@ -1,4 +1,6 @@
-from flask import Flask, render_template
+from pprint import pprint
+
+from flask import Flask, render_template, request
 import dao
 # tạo ứng dụng Flask
 app = Flask(__name__)
@@ -6,9 +8,14 @@ app = Flask(__name__)
 # Định nghĩa route cho trang chủ
 @app.route("/")
 def index():
-    name = "Khoi Le"
+    name = "Flask"
+    search = request.args.get('q')
+    cate_id = request.args.get('cate_id')
+
     cates = dao.load_category()
-    return render_template("index.html", name=name, categories=cates)
+    prod = dao.load_products(q=search, cate_id = cate_id)
+
+    return render_template("index.html", name=name, categories=cates, prod =prod)
     # Gửi dữ liệu 'name' đến template index.html
     return render_template("index.html", name = name)
 
