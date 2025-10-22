@@ -1,0 +1,28 @@
+[
+  [
+    {
+      "id": 1,
+      "name": "iphone 14",
+      "price": 799,
+      "categoryId": 2
+    },
+    {
+      "id": 2,
+      "name": "Samsung Galaxy S24",
+      "price": 899,
+      "categoryId": 2
+    },
+    {
+      "id": 3,
+      "name": "Pixel 8",
+      "price": 699,
+      "categoryId": 2
+    },
+    {
+      "id": 4,
+      "name": "MacBook Air",
+      "price": 999,
+      "categoryId": 1
+    }
+  ]
+]
